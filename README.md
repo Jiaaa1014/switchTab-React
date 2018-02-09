@@ -1,16 +1,19 @@
 
 ### Notes
 #### props
-if child get the prop from parent it uses `<Child />`
+if child get the prop from parent it uses `<Child props=value/>`
 
 We can write on child file getDefaultProps(), but it seems to not be working for me.
-and [here discussion](https://github.com/facebook/react-native/issues/1772) has many ways to try on.
+here is [reference](https://github.com/facebook/react-native/issues/1772) that has many ways to try on.
+
+it works
 ```js
 Navbar.defaultProps = {
   brand: 'ReactStrap'
 }
 ```
 
+it works,too
 ```js
   static get defaultProps() {
     return {
@@ -18,7 +21,6 @@ Navbar.defaultProps = {
     }
   }
 ```
-
 
 #### this
 
