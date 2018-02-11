@@ -1,26 +1,5 @@
 
 ### Notes
-#### props
-if child get the prop from parent it uses `<Child props=value/>`
-
-We can write on child file `getDefaultProps()`, but it seems to not be working for me.
-And here is [reference](https://github.com/facebook/react-native/issues/1772) that has many ways to try on.
-
-it works
-```js
-Navbar.defaultProps = {
-  brand: 'ReactStrap'
-}
-```
-
-it works, too
-```js
-  static get defaultProps() {
-    return {
-      brand: 'ReactStrap'
-    }
-  }
-```
 
 #### this
 
@@ -53,7 +32,13 @@ or using arrow function (handy way)
   }
 ```
 
-### defaultProps 
+---
+
+#### defaultProps 
+
+We can write on child file `getDefaultProps()`, but it seems to not be working for me.
+And here is [reference](https://github.com/facebook/react-native/issues/1772) that has many ways to try on.
+
 here is [reference](https://github.com/facebook/react/issues/3725)
 `Theme.jsx` Both work.
 ```js
