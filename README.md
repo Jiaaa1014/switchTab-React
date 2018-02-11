@@ -54,7 +54,7 @@ or using arrow function (handy way)
 ```
 
 ### defaultProps 
-
+here is [reference](https://github.com/facebook/react/issues/3725)
 `Theme.jsx` Both work.
 ```js
 export defalut class Theme extends Cmponent{
