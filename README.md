@@ -52,3 +52,37 @@ or using arrow function (handy way)
     this.setState({ currentPage: page })
   }
 ```
+
+### defaultProps 
+
+`Theme.jsx` Both work.
+```js
+export defalut class Theme extends Cmponent{
+  static defaultProps = {
+    brand: 'ReactStrap',
+    heading: 'Hello World',
+    text: 'this is a bs theme'
+  }
+}
+```
+
+```js
+export defalut class Theme extends Cmponent{
+  static get defaultProps() {
+    return {
+      brand: 'ReactStrap',
+      heading: 'Hello World',
+      text: 'this is a bs theme'
+    }
+  }
+}
+```
+The third way is outside the `export... class`
+```js
+export defalut class Theme extends Cmponent{/**/}
+Theme.defaultProps = {
+  brand: 'ReactStrap',
+  heading: 'Hello World',
+  text: 'this is a bs theme'
+}
+```

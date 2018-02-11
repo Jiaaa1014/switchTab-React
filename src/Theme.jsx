@@ -7,23 +7,21 @@ export default class Theme extends React.Component {
   constructor() {
     super()
     this.state = {
-      currentPage: 'contact'
+      currentPage: 'home'
     }
   }
 
-  static get defaultProps() {
-    return {
-      brand: 'ReactStrap',
-      heading: 'Hello World',
-      text: 'this is a bs theme'
-    }
+  static defaultProps = {
+    brand: 'ReactStrap',
+    heading: 'Hello World',
+    text: 'this is a bs theme'
   }
-  handleChange(page) {
-    this.setState({ currentPage: page })
-  }
-  // handleChange = (page) => {
+  // handleChange(page) {
   //   this.setState({ currentPage: page })
   // }
+  handleChange = (page) => {
+    this.setState({ currentPage: page })
+  }
 
   render() {
     let jumbotron
@@ -34,7 +32,7 @@ export default class Theme extends React.Component {
         <Navbar
           currentPage={this.state.currentPage}
           brand={this.props.brand}
-          change={this.handleChange.bind(this)}
+          change={this.handleChange}
         />
         {jumbotron}
         <Page currentPage={this.state.currentPage} />
