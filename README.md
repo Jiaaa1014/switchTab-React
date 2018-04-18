@@ -1,7 +1,7 @@
 
-### Notes
+# Notes
 
-#### this
+## this
 
 > TypeError: this.setState is not a function. (Theme.jsx)
  
@@ -17,9 +17,9 @@ handleChange(page) {
 render(){
   return(
     <Navbar
-    currentPage={this.state.currentPage}
-    brand={this.props.brand}
-    change={this.handleChange.bind(this)}
+     currentPage={this.state.currentPage}
+     brand={this.props.brand}
+     change={this.handleChange.bind(this)}
     />
   )
 }
@@ -34,13 +34,13 @@ or using arrow function (handy way)
 
 ---
 
-#### defaultProps 
+## defaultProps 
 
-We can write on child file `getDefaultProps()`, but it seems to not be working for me.
+在此元件寫props
 And here is [reference](https://github.com/facebook/react-native/issues/1772) that has many ways to try on.
 
 here is [reference](https://github.com/facebook/react/issues/3725)
-`Theme.jsx` Both work.
+* `static defaultProps`
 ```js
 export defalut class Theme extends Cmponent{
   static defaultProps = {
@@ -50,7 +50,7 @@ export defalut class Theme extends Cmponent{
   }
 }
 ```
-
+* `static get defaultProps()`
 ```js
 export defalut class Theme extends Cmponent{
   static get defaultProps() {
@@ -62,7 +62,7 @@ export defalut class Theme extends Cmponent{
   }
 }
 ```
-The third way is outside the `export... class`
+* 寫在class外面
 ```js
 export defalut class Theme extends Cmponent{/**/}
 Theme.defaultProps = {
