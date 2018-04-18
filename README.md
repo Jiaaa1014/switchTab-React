@@ -32,11 +32,10 @@ or using arrow function (handy way)
   }
 ```
 
----
-
 ## defaultProps 
 
-在此元件寫props
+在子元件寫props
+
 And here is [reference](https://github.com/facebook/react-native/issues/1772) that has many ways to try on.
 
 here is [reference](https://github.com/facebook/react/issues/3725)
