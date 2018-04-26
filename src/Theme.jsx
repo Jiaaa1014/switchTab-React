@@ -16,9 +16,7 @@ export default class Theme extends React.Component {
     heading: 'Hello World',
     text: 'this is a bs theme'
   }
-  // handleChange(page) {
-  //   this.setState({ currentPage: page })
-  // }
+
   handleChange = (page) => {
     this.setState({ currentPage: page })
   }
@@ -26,7 +24,7 @@ export default class Theme extends React.Component {
   render() {
     let jumbotron
     if (this.state.currentPage === 'home') jumbotron = <Jumbotron heading={this.props.heading} text={this.props.text} />
-    else jumbotron = ''
+    else jumbotron = null
     return (
       <div>
         <Navbar

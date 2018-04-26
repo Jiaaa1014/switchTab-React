@@ -8,9 +8,12 @@ export default class Navbar extends React.Component {
   //   }
   // }
 
-  change(page) {
+  change = (page) => {
     this.props.change(page)
   }
+
+  // change(page){/*  */} vs onClick={()=>this.change('home')}
+  // change(page){/*  */} vs onClick={this.change.bind(this, 'home')}
 
   render() {
     return (
@@ -21,7 +24,6 @@ export default class Navbar extends React.Component {
           </div>
           <div id="navbar">
             <div className="nav navbar-nav">
-              {/* put active in li not a */}
               <li className={this.props.currentPage === 'home' ? 'active' : ''}><a href="#" onClick={this.change.bind(this, 'home')}>Home</a></li>
               <li className={this.props.currentPage === 'about' ? 'active' : ''}><a href="#" onClick={this.change.bind(this, 'about')}>About</a></li>
               <li className={this.props.currentPage === 'contact' ? 'active' : ''}><a href="#" onClick={this.change.bind(this, 'contact')}>Contact</a></li></div>
